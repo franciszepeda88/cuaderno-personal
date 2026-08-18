@@ -41,5 +41,9 @@ social:
     handle: FZMarcusArelius
     desc: Ideas mientras están en caliente.
     url: https://x.com/FZMarcusArelius
+  - platform: Substack
+    handle: "@franciszepeda88"
+    desc: For the soul is dyed by the thoughs
+    url: https://substack.com/@franciszepeda88
 newsletter_title: El boletín quincenal
 newsletter_desc: Un ensayo nuevo cada dos semanas, directo a tu correo. Sin ruido de por medio.
