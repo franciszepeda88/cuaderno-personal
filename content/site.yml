@@ -14,7 +14,7 @@ bio_extra: >
   cambiando mi manera de ver las cosas. Publico aproximadamente cada dos
   semanas; lo demás son notas cortas que comparto en el camino.
 pull_quote: Escribir es la forma más lenta de estar seguro de lo que uno piensa.
-initials: static/img/uploads/bmp00347.jpeg
+initials: FZ
 year: 2026
 topics:
   - name: Filosofía
@@ -31,10 +31,6 @@ topics:
     index: "04"
     desc: Notas breves, sin pretensión de sistema — el cuaderno abierto.
 social:
-  - platform: LinkedIn
-    handle: /in/francis-zepeda
-    desc: Ideas sobre estrategia y liderazgo, en formato corto
-    url: https://linkedin.com/in/francis-zepeda
   - platform: X
     handle: "@francis_zepeda"
     desc: Hilos e ideas sueltas, mientras están calientes
