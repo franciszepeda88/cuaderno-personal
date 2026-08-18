@@ -31,13 +31,13 @@ topics:
     index: "04"
     desc: Notas breves, sin pretensión de sistema — el cuaderno abierto.
 social:
-  - platform: X
-    handle: "@francis_zepeda"
-    desc: Hilos e ideas sueltas, mientras están calientes
-    url: https://x.com/francis_zepeda
   - platform: LinkedIn
     handle: https://hn.linkedin.com/in/francis-zepeda-15b6a262
     desc: Estrategia y liderazgo
     url: https://hn.linkedin.com/in/francis-zepeda-15b6a262
+  - platform: X
+    handle: FZMarcusArelius
+    desc: Ideas mientras están en caliente.
+    url: https://x.com/FZMarcusArelius
 newsletter_title: El boletín quincenal
 newsletter_desc: Un ensayo nuevo cada dos semanas, directo a tu correo. Sin ruido de por medio.
