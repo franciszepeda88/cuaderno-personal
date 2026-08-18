@@ -4,7 +4,11 @@
 <main id="main">
 
   <section class="hero" id="hero">
+    {% if site.hero_image %}
+    <img class="hero-photo" src="{{ site.hero_image }}" alt="" aria-hidden="true">
+    {% else %}
     <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    {% endif %}
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="wrap hero-inner reveal">
       <span class="eyebrow eyebrow-on-hero">{{ site.hero_kicker }}</span>
@@ -88,7 +92,11 @@
         </div>
       </div>
       <div class="about-grid reveal">
+        {% if site.profile_photo %}
+        <img class="monogram-photo" src="{{ site.profile_photo }}" alt="Foto de {{ site.name }}">
+        {% else %}
         <div class="monogram">{{ site.initials }}</div>
+        {% endif %}
         <div class="about-bio">
           <p>{{ site.bio }}</p>
           <p>{{ site.bio_extra }}</p>

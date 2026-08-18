@@ -50,6 +50,16 @@ collections:
           - { label: "Biografía — párrafo 2", name: "bio_extra", widget: "text" }
           - { label: "Cita destacada", name: "pull_quote", widget: "string" }
           - { label: "Iniciales (círculo de la sección Sobre mí)", name: "initials", widget: "string" }
+          - label: "Foto de perfil (sección Sobre mí)"
+            name: "profile_photo"
+            widget: "image"
+            required: false
+            hint: "Si la dejas vacía, se muestran tus iniciales en un círculo de color."
+          - label: "Imagen de fondo del hero"
+            name: "hero_image"
+            widget: "image"
+            required: false
+            hint: "Foto o diseño para el fondo de portada. Si la dejas vacía, se usa el degradado azul animado."
           - { label: "Año (para el copyright)", name: "year", widget: "number" }
           - label: "Temas (los 4 recuadros de 'En qué escribo')"
             name: "topics"
