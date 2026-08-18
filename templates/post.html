@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — {{ site.name }}{% endblock %}
+{% block description %}{{ post.dek }}{% endblock %}
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.dek }}{% endblock %}
+{% block content %}
+<main id="main">
+  <article class="post-page">
+    <div class="wrap">
+      <div class="col reveal">
+        <a href="{{ base_path }}index.html#ensayos" class="link-arrow back-link">← Todos los ensayos</a>
+        <div class="hero-meta post-meta">
+          <span class="eyebrow">Ensayo N.º {{ post.number }}</span>
+          <span class="dot-sep"></span>
+          <span class="eyebrow eyebrow-accent">{{ post.category }}</span>
+        </div>
+        <h1 class="lead-title post-title">{{ post.title }}</h1>
+        <p class="dek">{{ post.dek }}</p>
+        <div class="byline"><b>{{ site.name }}</b> · {{ post.date_display }} · {{ post.read_time }}</div>
+        <div class="excerpt post-body">
+          {{ post.body_html|safe }}
+        </div>
+
+        {% if prev_post or next_post %}
+        <nav class="post-nav">
+          {% if prev_post %}
+          <a href="{{ base_path }}{{ prev_post.url }}" class="post-nav-item">
+            <span class="eyebrow">Ensayo anterior</span>
+            <span class="post-nav-title">{{ prev_post.title }}</span>
+          </a>
+          {% else %}<span></span>{% endif %}
+          {% if next_post %}
+          <a href="{{ base_path }}{{ next_post.url }}" class="post-nav-item post-nav-next">
+            <span class="eyebrow">Ensayo siguiente</span>
+            <span class="post-nav-title">{{ next_post.title }}</span>
+          </a>
+          {% endif %}
+        </nav>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</main>
+{% endblock %}

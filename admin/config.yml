@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Se activa solo cuando el sitio corre en tu dominio de Netlify.
+local_backend: true
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "posts"
+    label: "Ensayos"
+    label_singular: "Ensayo"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{category}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options: ["Filosofía", "Geopolítica", "Empresa", "Pensamientos"]
+      - { label: "Entradilla (una frase que resuma el ensayo)", name: "dek", widget: "text" }
+      - { label: "Tiempo de lectura", name: "read_time", widget: "string", default: "6 min de lectura" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "site"
+    label: "Ajustes del sitio"
+    editor: { preview: false }
+    files:
+      - name: "config"
+        label: "General"
+        file: "content/site.yml"
+        fields:
+          - { label: "Tu nombre", name: "name", widget: "string" }
+          - { label: "Logotipo en texto (usa · para el punto)", name: "wordmark", widget: "string" }
+          - { label: "Frase debajo del logo", name: "tagline", widget: "string" }
+          - { label: "Etiqueta pequeña sobre el título del hero", name: "hero_kicker", widget: "string" }
+          - { label: "Título grande del hero", name: "hero_title", widget: "string" }
+          - { label: "Subtítulo del hero", name: "hero_sub", widget: "text" }
+          - { label: "Biografía — párrafo 1", name: "bio", widget: "text" }
+          - { label: "Biografía — párrafo 2", name: "bio_extra", widget: "text" }
+          - { label: "Cita destacada", name: "pull_quote", widget: "string" }
+          - { label: "Iniciales (círculo de la sección Sobre mí)", name: "initials", widget: "string" }
+          - { label: "Año (para el copyright)", name: "year", widget: "number" }
+          - label: "Temas (los 4 recuadros de 'En qué escribo')"
+            name: "topics"
+            widget: "list"
+            fields:
+              - { label: "Número", name: "index", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Redes sociales"
+            name: "social"
+            widget: "list"
+            fields:
+              - { label: "Plataforma", name: "platform", widget: "string" }
+              - { label: "@usuario o URL corta a mostrar", name: "handle", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "string" }
+              - { label: "Enlace completo", name: "url", widget: "string" }
+          - { label: "Título del boletín", name: "newsletter_title", widget: "string" }
+          - { label: "Descripción del boletín", name: "newsletter_desc", widget: "text" }

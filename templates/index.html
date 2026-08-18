@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block body_class %}has-hero{% endblock %}
+{% block content %}
+<main id="main">
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="wrap hero-inner reveal">
+      <span class="eyebrow eyebrow-on-hero">{{ site.hero_kicker }}</span>
+      <h1 class="hero-headline">{{ site.hero_title }}</h1>
+      <p class="hero-lede">{{ site.hero_sub }}</p>
+      <a href="#lead" class="scroll-cue">
+        <span>Leer el último ensayo</span>
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  {% if lead %}
+  <section class="lead-essay" id="lead">
+    <div class="wrap">
+      <div class="col reveal">
+        <div class="hero-meta">
+          <span class="eyebrow">Ensayo N.º {{ lead.number }}</span>
+          <span class="dot-sep"></span>
+          <span class="eyebrow eyebrow-accent">{{ lead.category }}</span>
+        </div>
+        <h2 class="lead-title"><a href="{{ base_path }}{{ lead.url }}" class="quiet">{{ lead.title }}</a></h2>
+        <p class="dek">{{ lead.dek }}</p>
+        <div class="byline"><b>{{ site.name }}</b> · {{ lead.date_display }} · {{ lead.read_time }}</div>
+        <div class="excerpt">
+          <p class="drop">{{ lead.excerpt }}</p>
+          <div class="continue"><a href="{{ base_path }}{{ lead.url }}" class="link-arrow">Seguir leyendo →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="bordered" id="ensayos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Archivo reciente</span>
+          <h2 class="section-title">Últimos ensayos</h2>
+        </div>
+      </div>
+      <div class="essay-list reveal">
+        {% for post in rest %}
+        <a class="essay-row" href="{{ base_path }}{{ post.url }}">
+          <span class="essay-num tnum">N.º {{ post.number }}</span>
+          <span class="essay-cat">{{ post.category }}</span>
+          <span class="essay-title">{{ post.title }}</span>
+          <span class="essay-date tnum">{{ post.date_short }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered" id="temas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Cuatro hilos conductores</span>
+          <h2 class="section-title">En qué escribo</h2>
+        </div>
+      </div>
+      <div class="topics-grid reveal">
+        {% for t in site.topics %}
+        <div class="topic-card">
+          <span class="topic-index tnum">{{ t.index }}</span>
+          <span class="topic-name">{{ t.name }}</span>
+          <p class="topic-desc">{{ t.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered" id="sobre-mi">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Quién escribe</span>
+          <h2 class="section-title">Sobre mí</h2>
+        </div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="monogram">{{ site.initials }}</div>
+        <div class="about-bio">
+          <p>{{ site.bio }}</p>
+          <p>{{ site.bio_extra }}</p>
+          <blockquote class="pull">«{{ site.pull_quote }}»</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered" id="en-otros-lugares">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">También aquí</span>
+          <h2 class="section-title">Sígueme en otros lugares</h2>
+        </div>
+      </div>
+      <div class="elsewhere-list reveal">
+        {% for s in site.social %}
+        <a class="elsewhere-row" href="{{ s.url }}" target="_blank" rel="noopener">
+          <div class="elsewhere-left">
+            <span class="elsewhere-platform">{{ s.platform }}</span>
+            <span class="elsewhere-handle">{{ s.handle }}</span>
+          </div>
+          <span class="elsewhere-desc">{{ s.desc }}</span>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="newsletter-box reveal">
+        <div class="newsletter-copy">
+          <h3>{{ site.newsletter_title }}</h3>
+          <p>{{ site.newsletter_desc }}</p>
+        </div>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input class="email-input" type="email" placeholder="tu@correo.com" aria-label="Correo electrónico" required>
+          <button class="submit-btn" type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

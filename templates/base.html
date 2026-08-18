@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.name }} — {{ site.tagline }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+<meta property="og:title" content="{% block og_title %}{{ site.name }}{% endblock %}">
+<meta property="og:description" content="{% block og_description %}{{ site.tagline }}{% endblock %}">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232952E3%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22Georgia,serif%22 fill=%22%23fff%22 text-anchor=%22middle%22>F</text></svg>">
+<link rel="stylesheet" href="{{ base_path }}css/style.css">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="masthead" id="masthead">
+  <div class="wrap masthead-row">
+    <a href="{{ base_path }}index.html" class="wordmark quiet">{{ site.wordmark.replace("·", "<span>·</span>")|safe }}</a>
+    <nav class="primary">
+      <a href="{{ base_path }}index.html#ensayos">Ensayos</a>
+      <a href="{{ base_path }}index.html#temas">Temas</a>
+      <a href="{{ base_path }}index.html#sobre-mi">Sobre mí</a>
+      <a href="{{ base_path }}index.html#en-otros-lugares" class="btn-outline">Sígueme</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="dot"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer>
+  <div class="wrap colophon">
+    <p>Este cuaderno se actualiza cada dos semanas, aproximadamente. © {{ site.year }} {{ site.name }}.</p>
+    <a href="#masthead" class="back-top">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="{{ base_path }}js/main.js" defer></script>
+</body>
+</html>
