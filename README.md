@@ -79,13 +79,24 @@ autorizar. Te dejo la ruta exacta:
 5. Dale a **"Deploy"**. En un par de minutos tu sitio queda publicado en una URL gratis
    tipo `https://cuaderno-personal-xyz123.netlify.app` (puedes cambiar ese subdominio
    por uno tuyo, gratis, en *Site settings → Domain management*).
-6. **El panel de escritura ya funciona sin pasos extra:** `admin/config.yml` usa el backend
-   `github` directo — cuando entres a `tusitio.netlify.app/admin`, dale a "Login with GitHub"
-   e inicia sesión con tu propia cuenta (Netlify provee el proxy de autenticación automáticamente
-   para cualquier sitio que aloja). La primera vez, GitHub te pedirá autorizar la aplicación
-   "Netlify CMS OAuth" — acéptalo, es el mecanismo estándar de Decap CMS.
-7. **Si el sitio muestra "401 Unauthorized"** al abrirlo, es que Netlify lo dejó como privado
+6. **Si el sitio muestra "401 Unauthorized"** al abrirlo, es que Netlify lo dejó como privado
    por defecto — en el panel del proyecto, dale a **"Make public"**.
+7. **Activa el login del panel `/admin`** — Netlify ya no ofrece esto automático (descontinuó
+   Identity y su proxy de autenticación), así que el sitio trae su propio puente en
+   `netlify/functions/`. Para activarlo:
+   1. Ve a **[github.com/settings/developers](https://github.com/settings/developers) → "New OAuth App"**.
+      - *Application name*: lo que quieras, por ejemplo "Cuaderno personal".
+      - *Homepage URL*: `https://tusitio.netlify.app`
+      - *Authorization callback URL*: `https://tusitio.netlify.app/api/callback`
+      - Dale "Register application".
+   2. Copia el **Client ID**. Dale "Generate a new client secret" y copia el secreto
+      (solo se muestra una vez).
+   3. En Netlify: **Project configuration → Environment variables → Add a variable**, y crea:
+      - `OAUTH_CLIENT_ID` = el Client ID
+      - `OAUTH_CLIENT_SECRET` = el client secret
+   4. Vuelve a **Deploys → Trigger deploy** para que tome las variables nuevas.
+   5. Entra a `tusitio.netlify.app/admin`, dale "Login with GitHub" — ahora sí debería
+      pedirte autorizar y dejarte entrar.
 
 Cuando más adelante quieras un dominio propio (tunombre.com), lo compras donde prefieras
 y lo conectas gratis desde *Site settings → Domain management → Add a domain* — Netlify

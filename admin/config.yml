@@ -2,6 +2,8 @@ backend:
   name: github
   repo: franciszepeda88/cuaderno-personal
   branch: main
+  base_url: https://franciszepeda.netlify.app
+  auth_endpoint: api/auth
 
 # Se activa solo cuando el sitio corre en tu dominio de Netlify.
 local_backend: true
