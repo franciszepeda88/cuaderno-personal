@@ -3,6 +3,25 @@
 // (usando el client secret, que nunca sale del servidor) y se lo pasa de regreso a
 // la ventana del panel /admin mediante postMessage, tal como lo espera Decap CMS.
 
+function popupHtml(message) {
+  // JSON.stringify(message) produce un literal de JS correctamente escapado —
+  // imprescindible porque el token/JSON del mensaje contiene comillas dobles, y
+  // sin escapar rompían el <script> entero (pantalla en blanco, sin errores visibles).
+  return `<!doctype html>
+<html><body>
+<script>
+  (function () {
+    function receiveMessage() {
+      window.opener.postMessage(${JSON.stringify(message)}, "*");
+      window.removeEventListener("message", receiveMessage, false);
+    }
+    window.addEventListener("message", receiveMessage, false);
+    window.opener.postMessage("authorizing:github", "*");
+  })();
+</script>
+</body></html>`;
+}
+
 exports.handler = async (event) => {
   const code = event.queryStringParameters && event.queryStringParameters.code;
   const clientId = process.env.OAUTH_CLIENT_ID;
@@ -26,32 +45,20 @@ exports.handler = async (event) => {
   const tokenData = await tokenRes.json();
 
   if (!tokenRes.ok || tokenData.error) {
+    const errorPayload = JSON.stringify({
+      message: tokenData.error_description || tokenData.error || `HTTP ${tokenRes.status}`,
+    });
     return {
-      statusCode: 401,
-      body: `Error de autenticación con GitHub: ${tokenData.error_description || tokenData.error || tokenRes.status}`,
+      statusCode: 200,
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+      body: popupHtml(`authorization:github:error:${errorPayload}`),
     };
   }
 
-  const payload = JSON.stringify({ token: tokenData.access_token, provider: "github" });
-
-  // Handshake estándar que Decap CMS espera desde una ventana emergente de OAuth.
-  const html = `<!doctype html>
-<html><body>
-<script>
-  (function () {
-    function receiveMessage() {
-      window.opener.postMessage("authorization:github:success:${payload}", "*");
-      window.removeEventListener("message", receiveMessage, false);
-    }
-    window.addEventListener("message", receiveMessage, false);
-    window.opener.postMessage("authorizing:github", "*");
-  })();
-</script>
-</body></html>`;
-
+  const successPayload = JSON.stringify({ token: tokenData.access_token, provider: "github" });
   return {
     statusCode: 200,
     headers: { "Content-Type": "text/html; charset=utf-8" },
-    body: html,
+    body: popupHtml(`authorization:github:success:${successPayload}`),
   };
 };
