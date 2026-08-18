@@ -1,45 +1,47 @@
-name: "Francis Zepeda"
-wordmark: "FRANCIS·ZEPEDA"
-tagline: "Ensayos sobre filosofía, geopolítica y empresa"
-hero_kicker: "Un cuaderno personal"
-hero_title: "Ideas para pensar más despacio"
-hero_sub: "Ensayos cortos sobre filosofía, geopolítica y el mundo empresarial — publicados cada dos semanas, sin prisa."
+name: Francis Zepeda
+wordmark: FRANCIS·ZEPEDA
+tagline: Ensayos sobre filosofía, geopolítica y empresa
+hero_kicker: Un cuaderno personal
+hero_title: Ideas para pensar más despacio
+hero_sub: Ensayos cortos sobre filosofía, geopolítica y el mundo empresarial —
+  publicados cada dos semanas, sin prisa.
 bio: >
-  Soy Francis. Escribo aquí para pensar en voz alta. Este cuaderno reúne ensayos sobre
-  filosofía, geopolítica y el mundo empresarial — tres lenguajes distintos para la misma
-  pregunta de fondo: cómo decidir bien con información incompleta.
+  Soy Francis. Escribo aquí para pensar en voz alta. Este cuaderno reúne ensayos
+  sobre filosofía, geopolítica y el mundo empresarial — tres lenguajes distintos
+  para la misma pregunta de fondo: cómo decidir bien con información incompleta.
 bio_extra: >
-  No busco tener la última palabra, sino dejar un rastro honesto de cómo va cambiando mi
-  manera de ver las cosas. Publico aproximadamente cada dos semanas; lo demás son notas
-  cortas que comparto en el camino.
-pull_quote: "Escribir es la forma más lenta de estar seguro de lo que uno piensa."
-initials: "FZ"
+  No busco tener la última palabra, sino dejar un rastro honesto de cómo va
+  cambiando mi manera de ver las cosas. Publico aproximadamente cada dos
+  semanas; lo demás son notas cortas que comparto en el camino.
+pull_quote: Escribir es la forma más lenta de estar seguro de lo que uno piensa.
+initials: FZ
 year: 2026
 topics:
-  - name: "Filosofía"
+  - name: Filosofía
     index: "01"
     desc: "Preguntas que no caducan: sentido, tiempo, atención y la vida examinada."
-  - name: "Geopolítica"
+  - name: Geopolítica
     index: "02"
-    desc: "Poder, orden y las fronteras invisibles que deciden lo que es posible."
-  - name: "Empresa"
+    desc: Poder, orden y las fronteras invisibles que deciden lo que es posible.
+  - name: Empresa
     index: "03"
-    desc: "Decisiones bajo incertidumbre: estrategia, liderazgo y los límites del crecimiento."
-  - name: "Pensamientos"
+    desc: "Decisiones bajo incertidumbre: estrategia, liderazgo y los límites del
+      crecimiento."
+  - name: Pensamientos
     index: "04"
-    desc: "Notas breves, sin pretensión de sistema — el cuaderno abierto."
+    desc: Notas breves, sin pretensión de sistema — el cuaderno abierto.
 social:
-  - platform: "LinkedIn"
-    handle: "/in/francis-zepeda"
-    desc: "Ideas sobre estrategia y liderazgo, en formato corto"
-    url: "https://linkedin.com/in/francis-zepeda"
-  - platform: "X"
+  - platform: LinkedIn
+    handle: /in/francis-zepeda
+    desc: Ideas sobre estrategia y liderazgo, en formato corto
+    url: https://linkedin.com/in/francis-zepeda
+  - platform: X
     handle: "@francis_zepeda"
-    desc: "Hilos e ideas sueltas, mientras están calientes"
-    url: "https://x.com/francis_zepeda"
-  - platform: "Instagram"
-    handle: "@francis.zepeda"
-    desc: "Citas y fragmentos de cada ensayo, en imagen"
-    url: "https://instagram.com/francis.zepeda"
-newsletter_title: "El boletín quincenal"
-newsletter_desc: "Un ensayo nuevo cada dos semanas, directo a tu correo. Sin ruido de por medio."
+    desc: Hilos e ideas sueltas, mientras están calientes
+    url: https://x.com/francis_zepeda
+  - platform: LinkedIn
+    handle: https://hn.linkedin.com/in/francis-zepeda-15b6a262
+    desc: Estrategia y liderazgo
+    url: https://hn.linkedin.com/in/francis-zepeda-15b6a262
+newsletter_title: El boletín quincenal
+newsletter_desc: Un ensayo nuevo cada dos semanas, directo a tu correo. Sin ruido de por medio.
