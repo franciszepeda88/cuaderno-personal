@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: franciszepeda88/cuaderno-personal
   branch: main
 
 # Se activa solo cuando el sitio corre en tu dominio de Netlify.

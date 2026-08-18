@@ -79,10 +79,13 @@ autorizar. Te dejo la ruta exacta:
 5. Dale a **"Deploy"**. En un par de minutos tu sitio queda publicado en una URL gratis
    tipo `https://cuaderno-personal-xyz123.netlify.app` (puedes cambiar ese subdominio
    por uno tuyo, gratis, en *Site settings → Domain management*).
-6. **Activa el panel de escritura:** en Netlify ve a *Site settings → Identity → Enable Identity*,
-   y luego *Identity → Services → Git Gateway → Enable Git Gateway*. Después, en la pestaña
-   *Identity*, invítate a ti mismo con tu correo — te llegará un enlace para poner contraseña.
-   Con eso, `tusitio.netlify.app/admin` queda funcionando: inicias sesión y escribes desde ahí.
+6. **El panel de escritura ya funciona sin pasos extra:** `admin/config.yml` usa el backend
+   `github` directo — cuando entres a `tusitio.netlify.app/admin`, dale a "Login with GitHub"
+   e inicia sesión con tu propia cuenta (Netlify provee el proxy de autenticación automáticamente
+   para cualquier sitio que aloja). La primera vez, GitHub te pedirá autorizar la aplicación
+   "Netlify CMS OAuth" — acéptalo, es el mecanismo estándar de Decap CMS.
+7. **Si el sitio muestra "401 Unauthorized"** al abrirlo, es que Netlify lo dejó como privado
+   por defecto — en el panel del proyecto, dale a **"Make public"**.
 
 Cuando más adelante quieras un dominio propio (tunombre.com), lo compras donde prefieras
 y lo conectas gratis desde *Site settings → Domain management → Add a domain* — Netlify
