@@ -1,9 +1,9 @@
 ---
-title: "Sobre la prisa: una defensa del pensamiento lento"
+title: "Sobre la prisa: una defensa del pensamiento lento y crítico. "
 date: 2026-08-18
 category: Filosofía
 dek: Optimizamos cada minuto del día. Puede que el acto más radical, hoy, sea
-  pensar sin criterio.
+  pensar con criterio.
 read_time: 5 min de lectura
 ---
 Hay una violencia silenciosa en la prisa. No la de la celeridad, sino la del pensamiento que no termina de formarse porque la siguiente notificación ya está pidiendo turno. Nos hemos vuelto expertos en reaccionar y aprendices torpes en deliberar, y son dos habilidades distintas, casi opuestas.
