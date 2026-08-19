@@ -57,7 +57,40 @@ con su número de ensayo asignado solo (no lo escribas a mano).
 categoría, entradilla y un editor de texto para el contenido. Al hacer clic en
 "Publicar", el sitio se reconstruye solo en 1-2 minutos.
 
-## Publicarlo gratis (GitHub + Netlify)
+## Publicarlo gratis (GitHub + Cloudflare Pages) — recomendado
+
+Netlify pasó a un sistema de créditos que se puede agotar con tráfico normal de
+un blog. Cloudflare Pages no tiene ese límite (ancho de banda ilimitado gratis),
+así que es la opción recomendada. GitHub Actions compila el sitio (con Python) y
+lo sube a Cloudflare — Cloudflare solo aloja los archivos ya construidos.
+
+1. **Crea una cuenta gratis en [dash.cloudflare.com](https://dash.cloudflare.com)**.
+2. **Crea el proyecto Pages** (aunque lo vamos a desplegar por GitHub Actions,
+   necesitas el proyecto creado una vez): *Workers & Pages → Create → Pages →
+   Direct Upload* → nómbralo `cuaderno-personal` → sube cualquier archivo de
+   prueba solo para crear el proyecto (el deploy real lo hace GitHub Actions).
+3. **Crea un token de API**: *My Profile → API Tokens → Create Token → plantilla
+   "Edit Cloudflare Workers"* (o un token con permiso "Cloudflare Pages: Edit").
+   Cópialo.
+4. **Copia tu Account ID**: está en el panel derecho de cualquier página del
+   dashboard de Cloudflare.
+5. **En tu repositorio de GitHub**: *Settings → Secrets and variables → Actions
+   → New repository secret*, crea:
+   - `CLOUDFLARE_API_TOKEN` = el token del paso 3
+   - `CLOUDFLARE_ACCOUNT_ID` = el Account ID del paso 4
+6. **Sube el código** (`git push`) — el workflow en
+   `.github/workflows/deploy-cloudflare.yml` compila y despliega solo. Revisa
+   la pestaña **"Actions"** de GitHub para ver el progreso.
+7. Tu sitio queda en `https://cuaderno-personal.pages.dev` (o el nombre que
+   hayas usado en el paso 2 — actualízalo en `admin/config.yml → base_url` si
+   es distinto).
+8. **Panel `/admin`**: crea una **segunda GitHub OAuth App** (igual que hicimos
+   para Netlify, ver más abajo) con *Authorization callback URL* =
+   `https://cuaderno-personal.pages.dev/api/callback`, y agrega
+   `OAUTH_CLIENT_ID` / `OAUTH_CLIENT_SECRET` en Cloudflare: *tu proyecto Pages →
+   Settings → Environment variables*.
+
+## Publicarlo gratis (GitHub + Netlify) — alternativa / respaldo
 
 Esto lo tienes que hacer tú una vez — son cuentas y clics que solo tú puedes
 autorizar. Te dejo la ruta exacta:
