@@ -3,17 +3,19 @@ wordmark: FRANCIS·ZEPEDA
 tagline: Ensayos sobre filosofía, geopolítica y empresa
 hero_kicker: Un cuaderno personal
 hero_title: Ideas para pensar más despacio
-hero_sub: Ensayos cortos sobre filosofía, geopolítica y el mundo empresarial —
-  publicados cada dos semanas, sin prisa.
+hero_sub: Ensayos cortos sobre filosofía, geopolítica, pensamientos, y algo del
+  mundo del emprendimiento — publicados cada cierto tiempo, sin prisa.
 bio: >
-  Soy Francis. Escribo aquí para pensar en voz alta. Este cuaderno reúne ensayos
-  sobre filosofía, geopolítica y el mundo empresarial — tres lenguajes distintos
-  para la misma pregunta de fondo: cómo decidir bien con información incompleta.
+  Soy Francis Zepeda. Escribo aquí para vaciar mi mente y pensar en voz alta.
+  Este cuaderno reúne ensayos sobre filosofía, un poco de geopolítica y el mundo
+  del emprendimiento. Podrían parecer tres planteamientos distintos para la
+  misma pregunta de raíz: ¿Cómo decidir bien con información incompleta?.
 bio_extra: >
-  No busco tener la última palabra, sino dejar un rastro honesto de cómo va
-  cambiando mi manera de ver las cosas. Publico aproximadamente cada dos
-  semanas; lo demás son notas cortas que comparto en el camino.
-pull_quote: Escribir es la forma más lenta de estar seguro de lo que uno piensa.
+  No busco tener la última palabra, sino hacernos pensar de manera mas critica y
+  dejar un rastro de cómo ha ido cambiando mi manera de ver las cosas, (quiebre
+  ontológico) Tratare de publicar de manera frecuente. Y si no, al menos algunas
+  notas cortas que compartiré en el camino.
+pull_quote: "Porque el alma esta teñida con los pensamientos. "
 initials: FZ
 profile_photo: /img/uploads/bmp00347.jpeg
 hero_image: /img/uploads/chatgpt-image-aug-18-2026-at-03_55_28-pm.png
@@ -21,7 +23,8 @@ year: 2026
 topics:
   - name: Filosofía
     index: "01"
-    desc: "Preguntas que no caducan: sentido, tiempo, atención y la vida examinada."
+    desc: "Preguntas que no caducan: sentido, tiempo, atención y la vida examinada
+      de forma critica."
   - name: Geopolítica
     index: "02"
     desc: Poder, orden y las fronteras invisibles que deciden lo que es posible.
