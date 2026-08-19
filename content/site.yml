@@ -1,8 +1,8 @@
 name: Francis Zepeda
 wordmark: FRANCIS·ZEPEDA
-tagline: Ensayos sobre filosofía, geopolítica y empresa
+tagline: "Ensayos sobre filosofía, geopolítica, emprendimiento y pensamientos. "
 hero_kicker: Un cuaderno personal
-hero_title: Ideas para pensar más despacio
+hero_title: Ideas para pensar más despacio y crítico
 hero_sub: Ensayos cortos sobre filosofía, geopolítica, pensamientos, y algo del
   mundo del emprendimiento — publicados cada cierto tiempo, sin prisa.
 bio: >
@@ -27,14 +27,16 @@ topics:
       de forma critica."
   - name: Geopolítica
     index: "02"
-    desc: Poder, orden y las fronteras invisibles que deciden lo que es posible.
-  - name: Empresa
+    desc: Poder, orden y las fronteras invisibles que deciden lo que es ó no,
+      posible.
+  - name: "Emprendimiento "
     index: "03"
-    desc: "Decisiones bajo incertidumbre: estrategia, liderazgo y los límites del
-      crecimiento."
+    desc: "Decisiones bajo incertidumbre: experiencia, estrategia, liderazgo y los
+      límites al crecimiento."
   - name: Pensamientos
     index: "04"
-    desc: Notas breves, sin pretensión de sistema — el cuaderno abierto.
+    desc: "Notas breves, sin pretensión de altivez, el cuaderno abierto para volcar
+      los pensamientos. "
 social:
   - platform: LinkedIn
     handle: in/francis-zepeda
