@@ -4,15 +4,16 @@ date: 2026-08-21
 category: Empresa
 dek: El camino accidentado no es el obstáculo del propósito, es lo que le da
   sentido.
+meta_description: "Después de 15 años emprendiendo: por qué no existe gratificación sin sacrificio, y por qué son los obstáculos los que le dan sentido al propósito."
 read_time: 6 min de lectura
 ---
 Después de una trayectoria de más de 15 años en esta aventura llamada emprender, uno de los razonamientos más marcados que he obtenido es que no existe gratificación sin sacrificio. No pretendo sonar como coach motivacional, así que lo voy a decir más coloquial: no podemos llegar a un bello destino o paraje natural sin atravesar los caminos accidentados, las brechas rurales, el polvo y las piedras del camino.
 
 ## El camino accidentado
 
-Cuántas ocasiones no creí que iba a desistir, que esto realmente no era para mí. Cuántos desaciertos cometí. Cuántas noches sin dormir por la preocupación, dándole vueltas a un problema que no tenía solución clara todavía. Cuántos días en que el estrés me sobrepasaba, en que dudé de si valía la pena seguir metiéndole tiempo, dinero, salud mental a algo que solo me daba la esperanza que algo mas grande iba a suceder.
+Cuántas ocasiones no creí que iba a desistir, que esto realmente no era para mí. Cuántos desaciertos cometí. Cuántas noches sin dormir por la preocupación, dándole vueltas a un problema que no tenía solución clara todavía. Cuántos días en que el estrés me sobrepasaba, en que dudé de si valía la pena seguir metiéndole tiempo, dinero, salud mental a algo que solo me daba la esperanza que algo más grande iba a suceder.
 
-Nadie nos lo cuenta así cuando empezamos. Nos venden la parte bonita, la meta, el resultado. Nadie nos sienta a explicarnos que vamos a pasar años dudando si estamos loco por seguir insistiendo.
+Nadie nos lo cuenta así cuando empezamos. Nos venden la parte bonita, la meta, el resultado. Nadie nos sienta a explicarnos que vamos a pasar años dudando si estamos locos por seguir insistiendo.
 
 ## Lo que queda cuando se ve hacia atrás
 

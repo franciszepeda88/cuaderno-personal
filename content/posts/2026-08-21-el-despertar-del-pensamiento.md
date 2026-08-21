@@ -4,9 +4,10 @@ date: 2026-08-21
 category: Filosofía
 dek: El despertar no me trajo una vida distinta, me trajo la misma vida, pero
   vista, por fin, con los ojos abiertos.
+meta_description: "Sobre el quiebre ontológico que cambia la forma de ver la propia vida: el mismo camino recorrido, pero por fin con los ojos abiertos y atención real."
 read_time: 6 min de lectura
 ---
-# El despertar del pensamiento
+## El despertar del pensamiento
 
 Cerca de llegar a mis 40 años, me resulta casi irrisorio pensar que hasta hace no mucho tiempo veía la vida de una forma que hoy, al analizarla, me parece tan vaga, tan superficial. Y no hablo de apego a lo material, sino de algo más simple y más peligroso: vivir en modo automático. Sin siquiera tener la destreza de detenerme a reflexionar sobre lo que sucedía a mi alrededor. Como si hubiera estado dormido durante mucho tiempo, funcionando, cumpliendo, avanzando, pero sin estar del todo presente en nada de eso.
 
@@ -20,7 +21,7 @@ Y esa es quizás la palabra clave. Atención. No es que antes viviera mal, o que
 
 ## El precio de despertar
 
-Sin embargo nadie nos avisa que despertar tiene un costo. Cuando dejás de vivir en piloto automático, ya no puedes desactivar esa mirada más profunda cuando te conviene. (cuanta ventaja hay en la ignorancia) Las cosas que antes pasaban desapercibidas, una injusticia pequeña, una contradicción propia, un patrón que se repite, ahora se quedan, piden ser pensadas. Hay días en que extraño la ligereza de no ver tanto. Pero sería mentirme a mí mismo si dijera que quisiera volver atrás.
+Sin embargo nadie nos avisa que despertar tiene un costo. Cuando dejás de vivir en piloto automático, ya no puedes desactivar esa mirada más profunda cuando te conviene. (cuánta ventaja hay en la ignorancia) Las cosas que antes pasaban desapercibidas, una injusticia pequeña, una contradicción propia, un patrón que se repite, ahora se quedan, piden ser pensadas. Hay días en que extraño la ligereza de no ver tanto. Pero sería mentirme a mí mismo si dijera que quisiera volver atrás.
 
 ## Por qué ahora
 

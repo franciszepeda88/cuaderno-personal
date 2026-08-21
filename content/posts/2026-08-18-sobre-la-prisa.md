@@ -4,6 +4,7 @@ date: 2026-08-18
 category: Filosofía
 dek: Optimizamos cada minuto del día. Puede que el acto más radical, hoy, sea
   pensar con criterio.
+meta_description: "Una defensa del pensamiento lento en una época que premia la respuesta rápida: sobre la diferencia entre resolver un problema y solo aliviarlo."
 read_time: 5 min de lectura
 ---
 Hay una violencia silenciosa en la prisa. No la de la celeridad, sino la del pensamiento que no termina de formarse porque la siguiente notificación ya está pidiendo turno. Nos hemos vuelto expertos en reaccionar y aprendices torpes en deliberar, y son dos habilidades distintas, casi opuestas.
@@ -18,4 +19,4 @@ No toda decisión merece el mismo tiempo. Pero cuando todas las decisiones recib
 
 ## Pensar sin cronómetro
 
-Propongo algo simple: antes de decidir o decir algo que importa, preguntarse a si mismo si se está resolviendo el problema o simplemente procrastinando la incomodidad de no haberlo resuelto todavía. Son sensaciones parecidas pero no son lo mismo y solo el pensamiento lento y crítico alcanza a distinguirlas.
+Propongo algo simple: antes de decidir o decir algo que importa, preguntarse a sí mismo si se está resolviendo el problema o simplemente procrastinando la incomodidad de no haberlo resuelto todavía. Son sensaciones parecidas pero no son lo mismo y solo el pensamiento lento y crítico alcanza a distinguirlas.

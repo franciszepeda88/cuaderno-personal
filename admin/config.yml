@@ -30,6 +30,11 @@ collections:
         options: ["Filosofía", "Geopolítica", "Empresa", "Pensamientos"]
       - { label: "Entradilla (una frase que resuma el ensayo)", name: "dek", widget: "text" }
       - { label: "Tiempo de lectura", name: "read_time", widget: "string", default: "6 min de lectura" }
+      - label: "Descripción para buscadores (SEO, opcional)"
+        name: "meta_description"
+        widget: "text"
+        required: false
+        hint: "120-155 caracteres ideal. Si la dejas vacía, se usa la entradilla."
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "fragments"

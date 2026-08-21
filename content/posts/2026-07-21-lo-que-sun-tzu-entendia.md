@@ -2,7 +2,8 @@
 title: Lo que Sun Tzu entendía sobre negociar sin llegar a la guerra
 date: 2026-07-21
 category: Geopolítica
-dek: El mejor resultado nunca fue ganar el conflicto. Fue no llegar necesitarlo.
+dek: El mejor resultado nunca fue ganar el conflicto. Fue no llegar a necesitarlo.
+meta_description: "Por qué la lectura popular de El arte de la guerra se equivoca: el verdadero logro de Sun Tzu no era ganar la batalla, sino no necesitarla nunca."
 read_time: 2 min de lectura
 ---
 Se recurre a Sun Tzu, en salas de guerra como en salas de juntas, casi siempre mal referenciado. La lectura rápida y popular, reduce *El arte de la guerra* a una colección de tácticas para vencer. La lectura cuidadosa y con criterio, nos muestra una perspectiva fascinante: el verdadero logro es hacer que el conflicto directo deje de ser necesario.

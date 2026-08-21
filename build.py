@@ -9,6 +9,7 @@ Uso:
 No requiere Node ni npm. Dependencias: jinja2, pyyaml, markdown
 (instalar con:  pip install -r requirements.txt)
 """
+import json
 import re
 import shutil
 import sys
@@ -82,8 +83,10 @@ def parse_post(path):
         "date": post_date,
         "date_display": f"{post_date.day} de {MESES[post_date.month - 1]} de {post_date.year}",
         "date_short": f"{post_date.day:02d} {MESES_ABR[post_date.month - 1]} {post_date.year}",
+        "date_iso": post_date.isoformat(),
         "category": meta["category"],
         "dek": meta.get("dek", ""),
+        "meta_description": meta.get("meta_description", "") or meta.get("dek", ""),
         "read_time": meta.get("read_time", ""),
         "excerpt": excerpt,
         "body_html": body_html,
@@ -214,6 +217,45 @@ def make_og_image(out_path, title, kicker, site):
     bg.save(out_path, "JPEG", quality=87)
 
 
+def _rfc2822(d):
+    # Formato de fecha que exige el estándar RSS 2.0 (no acepta el formato ISO).
+    import datetime
+    return datetime.datetime(d.year, d.month, d.day).strftime("%a, %d %b %Y 00:00:00 +0000")
+
+
+def _xml_escape(text):
+    return (
+        text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        .replace('"', "&quot;").replace("'", "&apos;")
+    )
+
+
+def generate_rss(site, posts):
+    site_url = site.get("site_url", "").rstrip("/")
+    items = []
+    for post in posts[:20]:
+        items.append(f"""    <item>
+      <title>{_xml_escape(post['title'])}</title>
+      <link>{post['canonical_url']}</link>
+      <guid isPermaLink="true">{post['canonical_url']}</guid>
+      <pubDate>{_rfc2822(post['date'])}</pubDate>
+      <description>{_xml_escape(post['meta_description'])}</description>
+      <category>{_xml_escape(post['category'])}</category>
+    </item>""")
+    body = "\n".join(items)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{_xml_escape(site.get('name', ''))}</title>
+    <link>{site_url}/</link>
+    <description>{_xml_escape(site.get('tagline', ''))}</description>
+    <language>es</language>
+{body}
+  </channel>
+</rss>
+"""
+
+
 def build():
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -227,9 +269,25 @@ def build():
 
     # ---- imágenes para compartir (Open Graph) ----
     make_og_image(DIST / "og" / "site.jpg", site.get("hero_title", site.get("name", "")), site.get("hero_kicker", ""), site)
+    site_url = site.get("site_url", "").rstrip("/")
     for post in posts:
         make_og_image(DIST / "og" / f"{post['slug']}.jpg", post["title"], post["category"], site)
         post["og_image"] = f"og/{post['slug']}.jpg"
+        post["canonical_url"] = f"{site_url}/{post['url'].replace('index.html', '')}"
+        post["jsonld"] = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post["title"],
+            "description": post["meta_description"],
+            "datePublished": post["date_iso"],
+            "dateModified": post["date_iso"],
+            "url": post["canonical_url"],
+            "image": f"{site_url}/{post['og_image']}",
+            "author": {"@type": "Person", "name": site.get("name", "")},
+            "publisher": {"@type": "Person", "name": site.get("name", "")},
+            "mainEntityOfPage": {"@type": "WebPage", "@id": post["canonical_url"]},
+            "articleSection": post["category"],
+        }, ensure_ascii=False)
 
     # ---- index.html ----
     index_tpl = env.get_template("index.html")
@@ -251,6 +309,9 @@ def build():
             post_tpl.render(site=site, post=post, prev_post=prev_post, next_post=next_post, base_path="../../"),
             encoding="utf-8",
         )
+
+    # ---- RSS ----
+    (DIST / "rss.xml").write_text(generate_rss(site, posts), encoding="utf-8")
 
     # ---- 404 page ----
     notfound_tpl = env.get_template("404.html")

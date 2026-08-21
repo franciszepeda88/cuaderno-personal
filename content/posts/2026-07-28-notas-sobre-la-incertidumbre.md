@@ -3,9 +3,10 @@ title: Notas sobre la incertidumbre
 date: 2026-07-28
 category: Pensamientos
 dek: Fragmentos sueltos, sin la pretensión de convertirse todavía en un ensayo.
+meta_description: "Tres fragmentos breves sobre la incertidumbre: por qué no saber qué va a pasar no es lo mismo que no saber qué hacer, y cómo decidir de todos modos."
 read_time: 2 min de lectura
 ---
-La incertidumbre no es la ausencia de información. A veces es exactamente lo contrario: demasiada información sin un marco que la ordene. ¿Y que abruma mas que eso?
+La incertidumbre no es la ausencia de información. A veces es exactamente lo contrario: demasiada información sin un marco que la ordene. ¿Y qué abruma más que eso?
 
 - - -
 

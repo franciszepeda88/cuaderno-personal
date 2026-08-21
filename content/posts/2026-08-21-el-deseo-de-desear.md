@@ -4,9 +4,10 @@ date: 2026-08-21
 category: Filosofía
 dek: '"El deseo no busca ser saciado, busca perpetuarse, y quizás por eso, nunca
   dejamos de desear."'
+meta_description: "Un ensayo sobre por qué el deseo busca perpetuarse más que satisfacerse, con ayuda de los estoicos y la dicotomía entre lo que controlamos y lo que no."
 read_time: 5 min de lectura
 ---
-# El deseo de desear
+## El deseo de desear
 
 Cuántas veces no hemos sentido ese vacío literal, esa sensación de que algo nos falta. Tenemos, medianamente, todo lo que una buena vida nos puede favorecer: salud, trabajo, personas que nos quieren, un techo, un propósito reconocible. Y sin embargo ahí está, recóndito, esa falta. No grita, no tiene nombre propio, pero se hace sentir tajante.
 
@@ -22,7 +23,7 @@ No es que el objeto haya fallado. Es que nunca fue realmente el objeto lo que pe
 
 Haciendo referencia a una filosofía que me ha sido, maravilloso camino de entrada a este fascinante mundo, el estoicismo, ellos tenían una nomenclatura para esto, "la dicotomía del control", aunque la enmarcaban distinto: distinguían entre lo que está en nuestro control y lo que no. En este caso, el objeto del deseo, tenerlo, alcanzarlo, conservarlo, rara vez está completamente en nuestras manos. Pero el acto de desear, el movimiento interno hacia ese algo, ese sí nos pertenece. Quizás por eso nos aferramos más al camino que al destino. Es lo único que verdaderamente podemos gobernar. El destino se nos puede escapar, el deseo, no. El deseo es nuestro mientras dura.
 
-Epicteto diría que sufrimos no por las cosas que nos suceden, sino por la opinión que nosotros nos hacemos de ellas. Y tal vez el vacío del que hablo no sea un defecto a corregir, sino una demostración de conocimiento propio en el cual nos damos cuenta que no esta mal que no deseemos que el deseo termine.
+Epicteto diría que sufrimos no por las cosas que nos suceden, sino por la opinión que nosotros nos hacemos de ellas. Y tal vez el vacío del que hablo no sea un defecto a corregir, sino una demostración de conocimiento propio en el cual nos damos cuenta que no está mal que no deseemos que el deseo termine.
 
 ## Entonces, ¿Qué hacer con esto?
 

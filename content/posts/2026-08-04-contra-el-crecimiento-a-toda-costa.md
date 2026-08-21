@@ -4,6 +4,7 @@ date: 2026-08-04
 category: Empresa
 dek: No toda línea que sube es una buena noticia. Algunas empresas mueren de
   éxito mal administrado.
+meta_description: "Un ensayo sobre por qué crecer no siempre fortalece a una empresa, y por qué la pregunta correcta no es cuánto crecimos, sino qué no hicimos."
 read_time: 3 min de lectura
 ---
 Hay una pregunta que casi nunca se hace en la sala de reuniones con la seriedad que merece: ¿Este crecimiento nos está fortaleciendo o solo nos está haciendo más grandes?
