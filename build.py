@@ -63,8 +63,10 @@ def parse_post(path):
     if isinstance(post_date, str):
         post_date = date.fromisoformat(post_date)
 
-    body_html = markdown.markdown(body_md, extensions=["extra"])
+    md = markdown.Markdown(extensions=["extra", "toc"])
+    body_html = md.convert(body_md)
     body_html = body_html.replace("<p>", '<p class="drop">', 1)  # drop-cap on first paragraph
+    toc = [{"text": t["name"], "id": t["id"]} for t in md.toc_tokens if t["level"] == 2]
 
     first_block = body_md.split("\n\n", 1)[0]
     excerpt = re.sub(r"[#*_`]", "", first_block).strip()
@@ -90,6 +92,7 @@ def parse_post(path):
         "read_time": meta.get("read_time", ""),
         "excerpt": excerpt,
         "body_html": body_html,
+        "toc": toc,
         "slug": slug,
         "url": f"posts/{slug}/index.html",
         "source": path.name,
@@ -294,7 +297,16 @@ def build():
     lead = posts[0] if posts else None
     rest = posts[1:9] if len(posts) > 1 else []
     (DIST / "index.html").write_text(
-        index_tpl.render(site=site, lead=lead, rest=rest, fragments=fragments[:6], base_path=""),
+        index_tpl.render(site=site, lead=lead, rest=rest, fragments=fragments[:6], posts_total=len(posts), base_path=""),
+        encoding="utf-8",
+    )
+
+    # ---- ensayos.html (archivo completo) ----
+    categories = sorted({p["category"] for p in posts})
+    ensayos_tpl = env.get_template("ensayos.html")
+    (DIST / "ensayos").mkdir(parents=True, exist_ok=True)
+    (DIST / "ensayos" / "index.html").write_text(
+        ensayos_tpl.render(site=site, posts=posts, categories=categories, base_path="../"),
         encoding="utf-8",
     )
 

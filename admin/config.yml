@@ -94,6 +94,11 @@ collections:
             required: false
             hint: "Foto o diseño para el fondo de portada. Si la dejas vacía, se usa el degradado azul animado."
           - { label: "Año (para el copyright)", name: "year", widget: "number" }
+          - label: "Token de Cloudflare Web Analytics (opcional)"
+            name: "cf_analytics_token"
+            widget: "string"
+            required: false
+            hint: "De Cloudflare → Analytics & Logs → Web Analytics → Add a site. Déjalo vacío para no medir nada."
           - label: "Temas (los 4 recuadros de 'En qué escribo')"
             name: "topics"
             widget: "list"

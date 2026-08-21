@@ -7,8 +7,6 @@ dek: El despertar no me trajo una vida distinta, me trajo la misma vida, pero
 meta_description: "Sobre el quiebre ontológico que cambia la forma de ver la propia vida: el mismo camino recorrido, pero por fin con los ojos abiertos y atención real."
 read_time: 6 min de lectura
 ---
-## El despertar del pensamiento
-
 Cerca de llegar a mis 40 años, me resulta casi irrisorio pensar que hasta hace no mucho tiempo veía la vida de una forma que hoy, al analizarla, me parece tan vaga, tan superficial. Y no hablo de apego a lo material, sino de algo más simple y más peligroso: vivir en modo automático. Sin siquiera tener la destreza de detenerme a reflexionar sobre lo que sucedía a mi alrededor. Como si hubiera estado dormido durante mucho tiempo, funcionando, cumpliendo, avanzando, pero sin estar del todo presente en nada de eso.
 
 No fue un proceso gradual. Fue, más bien, un quiebre. Sé que suena a un concepto complejo, algo académico, pero es la mejor definición que encontré para lo que me pasó: un **quiebre ontológico**. Un punto en el que la forma en que hasta entonces había entendido mi propia existencia dejó de sostenerse, y algo distinto tomó su lugar.

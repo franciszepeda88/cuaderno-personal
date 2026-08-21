@@ -7,8 +7,6 @@ dek: '"El deseo no busca ser saciado, busca perpetuarse, y quizás por eso, nunc
 meta_description: "Un ensayo sobre por qué el deseo busca perpetuarse más que satisfacerse, con ayuda de los estoicos y la dicotomía entre lo que controlamos y lo que no."
 read_time: 5 min de lectura
 ---
-## El deseo de desear
-
 Cuántas veces no hemos sentido ese vacío literal, esa sensación de que algo nos falta. Tenemos, medianamente, todo lo que una buena vida nos puede favorecer: salud, trabajo, personas que nos quieren, un techo, un propósito reconocible. Y sin embargo ahí está, recóndito, esa falta. No grita, no tiene nombre propio, pero se hace sentir tajante.
 
 Según algunas lecturas, esto puede deberse a que nuestro deseo es desear, y no obtener lo que se desea. Confuso juego de palabras, pero describe algo preciso: nos entusiasma más, nos apasiona más, el camino hacia lo que deseamos que el momento en que realmente lo obtenemos. Se podría decir que, la cacería importa más que la presa.

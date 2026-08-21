@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Todos los ensayos — {{ site.name }}{% endblock %}
+{% block description %}El archivo completo de ensayos de {{ site.name }}, filtrable por tema.{% endblock %}
+{% block head_extra %}
+<link rel="canonical" href="{{ site.site_url }}/ensayos/">
+{% endblock %}
+{% block content %}
+<main id="main">
+  <section class="lead-essay">
+    <div class="wrap">
+      <div class="col reveal">
+        <a href="{{ base_path }}index.html#ensayos" class="link-arrow back-link">← Inicio</a>
+        <span class="eyebrow" style="display:block;margin-top:18px;">Archivo completo</span>
+        <h1 class="lead-title" style="margin-top:10px;">Todos los ensayos</h1>
+        <p class="dek">{{ posts|length }} ensayo{{ "s" if posts|length != 1 else "" }}, del más reciente al primero.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="wrap">
+      <div class="category-filters reveal" role="group" aria-label="Filtrar por tema">
+        <button type="button" class="filter-pill is-active" data-filter="todos">Todos</button>
+        {% for c in categories %}
+        <button type="button" class="filter-pill" data-filter="{{ c|lower }}">{{ c }}</button>
+        {% endfor %}
+      </div>
+
+      <div class="essay-list reveal" id="archive-list">
+        {% for post in posts %}
+        <a class="essay-row" href="{{ base_path }}{{ post.url }}" data-category="{{ post.category|lower }}">
+          <span class="essay-num tnum">N.º {{ post.number }}</span>
+          <span class="essay-cat">{{ post.category }}</span>
+          <span class="essay-title">{{ post.title }}</span>
+          <span class="essay-date tnum">{{ post.date_short }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      <p class="archive-empty" id="archive-empty" hidden>No hay ensayos en este tema todavía.</p>
+    </div>
+  </section>
+</main>
+{% endblock %}

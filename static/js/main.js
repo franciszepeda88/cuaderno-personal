@@ -64,6 +64,96 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Tamaño de letra del ensayo ---------- */
+  var fontSteps = [0.9, 1, 1.15, 1.3];
+  var fontButtons = document.querySelectorAll(".font-size-control button");
+  if (fontButtons.length) {
+    var currentStep = 1; // índice en fontSteps, arranca en 1 = tamaño normal
+    try {
+      var saved = parseInt(localStorage.getItem("font-step"), 10);
+      if (!isNaN(saved) && saved >= 0 && saved < fontSteps.length) currentStep = saved;
+    } catch (e) {}
+
+    var applyFontStep = function () {
+      document.documentElement.style.setProperty("--font-scale", fontSteps[currentStep]);
+      try { localStorage.setItem("font-step", currentStep); } catch (e) {}
+    };
+    applyFontStep();
+
+    fontButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var delta = parseInt(btn.getAttribute("data-font-step"), 10);
+        currentStep = Math.min(fontSteps.length - 1, Math.max(0, currentStep + delta));
+        applyFontStep();
+      });
+    });
+  }
+
+  /* ---------- Compartir frase seleccionada ---------- */
+  var quoteShare = document.getElementById("quote-share");
+  var postBody = document.querySelector(".post-body[data-post-url]");
+  if (quoteShare && postBody) {
+    var qsX = document.getElementById("qs-x");
+    var qsLinkedin = document.getElementById("qs-linkedin");
+    var qsWhatsapp = document.getElementById("qs-whatsapp");
+    var postUrl = postBody.getAttribute("data-post-url");
+
+    var hideQuoteShare = function () {
+      quoteShare.classList.remove("is-visible");
+      quoteShare.hidden = true;
+    };
+
+    document.addEventListener("mouseup", function (e) {
+      if (quoteShare.contains(e.target)) return; // don't hide when clicking the popup itself
+      var selection = window.getSelection();
+      var text = selection ? selection.toString().trim() : "";
+
+      if (!text || text.length < 8 || !postBody.contains(selection.anchorNode)) {
+        hideQuoteShare();
+        return;
+      }
+
+      var range = selection.getRangeAt(0);
+      var rect = range.getBoundingClientRect();
+      var quote = text.length > 280 ? text.slice(0, 277) + "…" : text;
+
+      qsX.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"') + "&url=" + encodeURIComponent(postUrl);
+      qsLinkedin.href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(postUrl);
+      qsWhatsapp.href = "https://wa.me/?text=" + encodeURIComponent('"' + quote + '" ' + postUrl);
+
+      quoteShare.hidden = false;
+      quoteShare.style.left = (rect.left + rect.width / 2 + window.scrollX) + "px";
+      quoteShare.style.top = (rect.top + window.scrollY) + "px";
+      requestAnimationFrame(function () { quoteShare.classList.add("is-visible"); });
+    });
+
+    document.addEventListener("scroll", hideQuoteShare, { passive: true });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") hideQuoteShare();
+    });
+  }
+
+  /* ---------- Filtro de categoría (archivo de ensayos) ---------- */
+  var filterPills = document.querySelectorAll(".filter-pill");
+  if (filterPills.length) {
+    var rows = document.querySelectorAll("#archive-list .essay-row");
+    var emptyMsg = document.getElementById("archive-empty");
+    filterPills.forEach(function (pill) {
+      pill.addEventListener("click", function () {
+        filterPills.forEach(function (p) { p.classList.remove("is-active"); });
+        pill.classList.add("is-active");
+        var filter = pill.getAttribute("data-filter");
+        var visibleCount = 0;
+        rows.forEach(function (row) {
+          var match = filter === "todos" || row.getAttribute("data-category") === filter;
+          row.style.display = match ? "" : "none";
+          if (match) visibleCount++;
+        });
+        if (emptyMsg) emptyMsg.hidden = visibleCount > 0;
+      });
+    });
+  }
+
   /* ---------- Fragmentos lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
   if (lightbox) {

@@ -60,6 +60,9 @@
         </a>
         {% endfor %}
       </div>
+      {% if posts_total > rest|length + (1 if lead else 0) %}
+      <div class="list-foot reveal"><a href="{{ base_path }}ensayos/" class="link-arrow">Ver todos los ensayos ({{ posts_total }}) →</a></div>
+      {% endif %}
     </div>
   </section>
 
