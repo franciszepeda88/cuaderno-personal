@@ -36,13 +36,6 @@ jobs:
             npx wrangler@3 pages project create cuaderno-personal --production-branch=main
           fi
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=cuaderno-personal --branch=main --commit-dirty=true
-
       - name: Configurar el login de /admin (secrets de Cloudflare Pages)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -50,3 +43,10 @@ jobs:
         run: |
           echo "${{ secrets.OAUTH_CLIENT_ID }}" | npx wrangler@3 pages secret put OAUTH_CLIENT_ID --project-name=cuaderno-personal
           echo "${{ secrets.OAUTH_CLIENT_SECRET }}" | npx wrangler@3 pages secret put OAUTH_CLIENT_SECRET --project-name=cuaderno-personal
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=cuaderno-personal --branch=main --commit-dirty=true
