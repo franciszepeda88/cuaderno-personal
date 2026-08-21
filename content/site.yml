@@ -1,20 +1,22 @@
 name: Francis Zepeda
 wordmark: FRANCIS·ZEPEDA
-tagline: "Ensayos sobre filosofía, geopolítica, emprendimiento y pensamientos. "
-hero_kicker: Un cuaderno personal
-hero_title: Ideas para pensar más despacio y crítico
-hero_sub: Ensayos cortos sobre filosofía, geopolítica, pensamientos, y algo del
-  mundo del emprendimiento. Publicados cada cierto tiempo, sin prisa.
+tagline: "Ensayos sobre filosofía, un poco de geopolítica, emprendimiento y
+  pensamientos. "
+hero_kicker: Un cuaderno personal.
+hero_title: Ideas para pensar más despacio y crítico.
+hero_sub: Ensayos cortos sobre filosofía, un poco de geopolítica, pensamientos,
+  y algo del mundo del emprendimiento. Publicados cada cierto tiempo, sin prisa.
 bio: >
   Soy Francis Zepeda. Escribo aquí para vaciar mi mente y pensar en voz alta.
   Este cuaderno reúne ensayos sobre filosofía, un poco de geopolítica y el mundo
   del emprendimiento. Podrían parecer tres planteamientos distintos para la
-  misma pregunta de raíz: ¿Cómo decidir bien con información incompleta?.
+  misma pregunta de raíz: ¿Cómo vamos a decidir bien con información
+  incompleta?.
 bio_extra: >
   No busco tener la última palabra, sino hacernos pensar de manera mas critica y
   dejar un rastro de cómo ha ido cambiando mi manera de ver las cosas, (quiebre
-  ontológico) Tratare de publicar de manera frecuente. Y si no, al menos algunas
-  notas cortas que compartiré en el camino.
+  ontológico). Tratare de publicar de manera frecuente. Y si no, al menos
+  algunas notas cortas que compartiré en el camino.
 pull_quote: "Porque el alma esta teñida con los pensamientos. "
 initials: FZ
 profile_photo: /img/uploads/bmp00347.jpeg
@@ -22,15 +24,15 @@ hero_image: /img/uploads/chatgpt-image-aug-18-2026-at-03_55_28-pm.png
 year: 2026
 topics:
   - name: Filosofía
-    index: "01"
+    index: "001"
     desc: "Preguntas que no caducan: sentido, tiempo, atención y la vida examinada
       de forma critica."
   - name: Geopolítica
-    index: "02"
+    index: "002"
     desc: Poder, orden y las fronteras invisibles que deciden lo que es ó no,
       posible.
   - name: "Emprendimiento "
-    index: "03"
+    index: "003"
     desc: "Decisiones bajo incertidumbre: experiencia, estrategia, liderazgo y los
       límites al crecimiento."
   - name: Pensamientos
@@ -40,15 +42,15 @@ topics:
 social:
   - platform: LinkedIn
     handle: in/francis-zepeda
-    desc: Estrategia y liderazgo
+    desc: Emprendimiento.
     url: https://hn.linkedin.com/in/francis-zepeda-15b6a262
   - platform: X
     handle: FZMarcusArelius
-    desc: Ideas mientras están en caliente.
+    desc: Ideas volcadas en directo.
     url: https://x.com/FZMarcusArelius
   - platform: Substack
     handle: "@franciszepeda88"
-    desc: For the soul is dyed by the thoughs
+    desc: For the soul is dyed by the thoughs.
     url: https://substack.com/@franciszepeda88
 newsletter_title: "El boletín ocasional. "
 newsletter_desc: Un ensayo nuevo cada cierto tiempo, directo a tu correo. Sin
