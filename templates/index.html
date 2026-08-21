@@ -94,16 +94,26 @@
       </div>
       <div class="fragments-grid reveal">
         {% for f in fragments %}
-        {% set tag = "a" if f.link else "div" %}
-        <{{ tag }} class="fragment-card"{% if f.link %} href="{{ f.link }}"{% endif %}>
-          <img class="fragment-img" src="{{ f.image }}" alt="{{ f.caption or '' }}" loading="lazy">
-          {% if f.caption %}<span class="fragment-caption">{{ f.caption }}</span>{% endif %}
-        </{{ tag }}>
+        <div class="fragment-card">
+          <button type="button" class="fragment-img-btn" data-lightbox-src="{{ f.image }}" data-lightbox-caption="{{ f.caption or '' }}" aria-label="Ver imagen en grande">
+            <img class="fragment-img" src="{{ f.image }}" alt="{{ f.caption or '' }}" loading="lazy">
+            {% if f.caption %}<span class="fragment-caption">{{ f.caption }}</span>{% endif %}
+          </button>
+          {% if f.link %}<a class="fragment-link" href="{{ f.link }}">Ver más →</a>{% endif %}
+        </div>
         {% endfor %}
       </div>
     </div>
   </section>
   {% endif %}
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar">✕</button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
 
   <section class="bordered" id="sobre-mi">
     <div class="wrap">

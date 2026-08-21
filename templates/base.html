@@ -10,7 +10,11 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="{% block og_image %}{{ site.site_url }}/og/site.jpg{% endblock %}">
 <meta name="twitter:card" content="summary_large_image">
+{% if site.favicon %}
+<link rel="icon" href="{{ site.favicon }}">
+{% else %}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232952E3%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22Georgia,serif%22 fill=%22%23fff%22 text-anchor=%22middle%22>F</text></svg>">
+{% endif %}
 <link rel="stylesheet" href="{{ base_path }}css/style.css">
 </head>
 <body class="{% block body_class %}{% endblock %}">
@@ -22,6 +26,7 @@
     <nav class="primary">
       <a href="{{ base_path }}index.html#ensayos">Ensayos</a>
       <a href="{{ base_path }}index.html#temas">Temas</a>
+      <a href="{{ base_path }}index.html#fragmentos">Fragmentos</a>
       <a href="{{ base_path }}index.html#sobre-mi">Sobre mí</a>
       <a href="{{ base_path }}index.html#en-otros-lugares" class="btn-outline">Sígueme</a>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">

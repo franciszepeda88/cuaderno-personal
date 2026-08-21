@@ -64,6 +64,43 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Fragmentos lightbox ---------- */
+  var lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    var lightboxImg = document.getElementById("lightbox-img");
+    var lightboxCaption = document.getElementById("lightbox-caption");
+    var lastFocused = null;
+
+    var openLightbox = function (src, caption) {
+      lastFocused = document.activeElement;
+      lightboxImg.src = src;
+      lightboxImg.alt = caption || "";
+      lightboxCaption.textContent = caption || "";
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      document.getElementById("lightbox-close").focus();
+    };
+    var closeLightbox = function () {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    };
+
+    document.querySelectorAll(".fragment-img-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openLightbox(btn.getAttribute("data-lightbox-src"), btn.getAttribute("data-lightbox-caption"));
+      });
+    });
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
+
   /* ---------- Reading progress bar (post pages) ---------- */
   var progressBar = document.getElementById("progress-bar");
   if (progressBar) {

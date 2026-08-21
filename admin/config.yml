@@ -37,8 +37,8 @@ collections:
     label_singular: "Fragmento"
     folder: "content/fragments"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: caption
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
+    identifier_field: date
     summary: "{{caption}}"
     sortable_fields: ["date"]
     fields:
@@ -63,6 +63,11 @@ collections:
         label: "General"
         file: "content/site.yml"
         fields:
+          - label: "Favicon (ícono de la pestaña)"
+            name: "favicon"
+            widget: "image"
+            required: false
+            hint: "Imagen cuadrada, idealmente 512×512px o similar. Si la dejas vacía, se usa el ícono azul con la F."
           - { label: "Tu nombre", name: "name", widget: "string" }
           - { label: "Logotipo en texto (usa · para el punto)", name: "wordmark", widget: "string" }
           - { label: "Frase debajo del logo", name: "tagline", widget: "string" }
