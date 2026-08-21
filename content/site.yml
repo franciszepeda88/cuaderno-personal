@@ -22,6 +22,11 @@ initials: FZ
 profile_photo: /img/uploads/bmp00347.jpeg
 hero_image: /img/uploads/hero-bg.jpg
 year: 2026
+cf_analytics_token: "<!-- Cloudflare Web Analytics --><script type='module'
+  src='https://static.cloudflareinsights.com/beacon.min.js'
+  data-cf-beacon='{\"token\":
+  \"631a059538d44e02b7894bb178f19ef6\"}'></script><!-- End Cloudflare Web
+  Analytics -->"
 topics:
   - name: Filosofía
     index: "001"
@@ -57,4 +62,3 @@ newsletter_desc: Un ensayo nuevo cada cierto tiempo. Sin ruido ni publicidad de 
 newsletter_url: https://substack.com/@franciszepeda88
 footer_note: Este cuaderno se actualiza cada cierto tiempo, aproximadamente.
 site_url: https://cuaderno-personal.pages.dev
-cf_analytics_token: ""
