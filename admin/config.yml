@@ -32,6 +32,29 @@ collections:
       - { label: "Tiempo de lectura", name: "read_time", widget: "string", default: "6 min de lectura" }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
+  - name: "fragments"
+    label: "Fragmentos"
+    label_singular: "Fragmento"
+    folder: "content/fragments"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: caption
+    summary: "{{caption}}"
+    sortable_fields: ["date"]
+    fields:
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Imagen", name: "image", widget: "image" }
+      - label: "Cita o frase (opcional)"
+        name: "caption"
+        widget: "string"
+        required: false
+        hint: "Se muestra sobre la imagen. Déjalo vacío para una imagen sin texto."
+      - label: "Enlace (opcional)"
+        name: "link"
+        widget: "string"
+        required: false
+        hint: "Si quieres que la imagen lleve a un ensayo o a otro sitio al hacer clic."
+
   - name: "site"
     label: "Ajustes del sitio"
     editor: { preview: false }

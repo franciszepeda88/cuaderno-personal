@@ -64,6 +64,32 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Reading progress bar (post pages) ---------- */
+  var progressBar = document.getElementById("progress-bar");
+  if (progressBar) {
+    var updateProgress = function () {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - doc.clientHeight;
+      var pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      progressBar.style.width = Math.min(100, Math.max(0, pct)) + "%";
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+  }
+
+  /* ---------- Hero parallax ---------- */
+  var heroBg = document.querySelector(".hero-photo, .hero-canvas");
+  var heroSection = document.querySelector(".hero");
+  if (heroBg && heroSection && !reduceMotion) {
+    var onHeroScroll = function () {
+      var h = heroSection.offsetHeight;
+      if (window.scrollY > h) return; // hero is off-screen, stop paying for it
+      heroBg.style.transform = "translateY(" + (window.scrollY * 0.18) + "px)";
+    };
+    window.addEventListener("scroll", onHeroScroll, { passive: true });
+  }
+
   /* ---------- Hero canvas: slow drifting blue field ---------- */
   var canvas = document.getElementById("hero-canvas");
   if (canvas && canvas.getContext) {

@@ -3,7 +3,9 @@
 {% block description %}{{ post.dek }}{% endblock %}
 {% block og_title %}{{ post.title }}{% endblock %}
 {% block og_description %}{{ post.dek }}{% endblock %}
+{% block og_image %}{{ site.site_url }}/{{ post.og_image }}{% endblock %}
 {% block content %}
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar" id="progress-bar"></div></div>
 <main id="main">
   <article class="post-page">
     <div class="wrap">
@@ -19,6 +21,14 @@
         <div class="byline"><b>{{ site.name }}</b> · {{ post.date_display }} · {{ post.read_time }}</div>
         <div class="excerpt post-body">
           {{ post.body_html|safe }}
+        </div>
+
+        {% set post_url = site.site_url ~ "/" ~ post.url|replace("index.html", "") %}
+        <div class="share-row">
+          <span class="eyebrow">Compartir</span>
+          <a class="share-link" href="https://twitter.com/intent/tweet?text={{ post.title|urlencode }}&url={{ post_url|urlencode }}" target="_blank" rel="noopener">X</a>
+          <a class="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ post_url|urlencode }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="share-link" href="https://wa.me/?text={{ (post.title ~ ' ' ~ post_url)|urlencode }}" target="_blank" rel="noopener">WhatsApp</a>
         </div>
 
         {% if prev_post or next_post %}

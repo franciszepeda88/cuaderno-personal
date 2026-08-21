@@ -83,6 +83,28 @@
     </div>
   </section>
 
+  {% if fragments %}
+  <section class="bordered" id="fragmentos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Notas sueltas</span>
+          <h2 class="section-title">Fragmentos</h2>
+        </div>
+      </div>
+      <div class="fragments-grid reveal">
+        {% for f in fragments %}
+        {% set tag = "a" if f.link else "div" %}
+        <{{ tag }} class="fragment-card"{% if f.link %} href="{{ f.link }}"{% endif %}>
+          <img class="fragment-img" src="{{ f.image }}" alt="{{ f.caption or '' }}" loading="lazy">
+          {% if f.caption %}<span class="fragment-caption">{{ f.caption }}</span>{% endif %}
+        </{{ tag }}>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <section class="bordered" id="sobre-mi">
     <div class="wrap">
       <div class="section-head reveal">
