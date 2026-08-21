@@ -16,7 +16,7 @@ Según algunas lecturas, esto puede deberse a que nuestro deseo es desear, y no
 
 Pensemos en cualquier meta reciente. El ascenso laboral que perseguimos por meses, la compra que planeamos con detalle de ese nuevo vehículo, la relación que anhelamos iniciar. Mientras el objeto está lejos, organiza nuestros días, les da dirección, incluso les da sentido. Nos despertamos con un motivo. Pero apenas se obtiene, apenas el deseo se satisface, casi de manera inmediata, algo curioso ocurre: la satisfacción dura poco, y el vacío regresa, ahora con otro nombre, otro objeto, otra excusa.
 
-No es que el objeto haya fallado. Es que nunca fue realmente el objeto lo que perseguíamos, sino el estado de perseguir. El deseo no buscar su propia extinción; busca quedarse. Y en cuanto se cumple, muere, y como no soportamos la ausencia de deseo, de inmediato fabricamos otro.
+No es que el objeto haya fallado. Es que nunca fue realmente el objeto lo que perseguíamos, sino el estado de perseguir. El deseo no busca su propia extinción; busca quedarse. Y en cuanto se cumple, muere, y como no soportamos la ausencia de deseo, de inmediato fabricamos otro.
 
 ## Lo que ya sabían los estoicos
 
