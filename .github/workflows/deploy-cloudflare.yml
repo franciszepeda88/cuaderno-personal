@@ -25,9 +25,20 @@ jobs:
           pip install -r requirements.txt
           python3 build.py
 
+      - name: Ensure Cloudflare Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if npx wrangler@3 pages project list | grep -q "cuaderno-personal"; then
+            echo "El proyecto ya existe, sigo."
+          else
+            npx wrangler@3 pages project create cuaderno-personal --production-branch=main
+          fi
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=cuaderno-personal --branch=main
+          command: pages deploy dist --project-name=cuaderno-personal --branch=main --commit-dirty=true
