@@ -14,7 +14,7 @@ Este ensayo no es una justificación a la lentitud, sino una pregunta incómoda:
 
 Vivimos en sistemas laborales, sociales, tecnológicos, que están diseñados para premiar la respuesta rápida. El WhatsApp que se contesta en segundos, la reunión que resuelve en una hora lo que merecía una semana, la opinión que se publica, incluso antes de terminar de pensarlo. La rapidez se ha vuelto sinónimo de competencia, cuando en realidad son cosas distintas.
 
-No toda decisión merece el mismo tiempo. Pero cuando todas las decisiones reciben el mismo trato urgente, perdemos la capacidad de distinguir cuáles sí lo requieren y cuáles no.
+No toda decisión merece el mismo tiempo. Pero cuando todas las decisiones reciben el mismo trato urgente, perdemos la capacidad de distinguir cuáles sí lo requieren y cuáles no. Cuando todo es urgente, nada es urgente.
 
 ## Pensar sin cronómetro
 
