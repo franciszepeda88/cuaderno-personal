@@ -1,4 +1,3 @@
-site_url: https://cuaderno-personal.pages.dev
 name: Francis Zepeda
 wordmark: FRANCIS·ZEPEDA
 tagline: "Ensayos sobre filosofía, un poco de geopolítica, emprendimiento y
@@ -57,4 +56,5 @@ newsletter_title: "El boletín ocasional. "
 newsletter_desc: Un ensayo nuevo cada cierto tiempo, directo a tu correo. Sin
   ruido ni publicidad de por medio.
 newsletter_url: https://substack.com/@franciszepeda88
-footer_note: Este cuaderno se actualiza cada dos semanas, aproximadamente.
+footer_note: Este cuaderno se actualiza cada cierto tiempo, aproximadamente.
+site_url: https://cuaderno-personal.pages.dev
