@@ -131,10 +131,7 @@
           <h3>{{ site.newsletter_title }}</h3>
           <p>{{ site.newsletter_desc }}</p>
         </div>
-        <form class="newsletter-form" onsubmit="return false;">
-          <input class="email-input" type="email" placeholder="tu@correo.com" aria-label="Correo electrónico" required>
-          <button class="submit-btn" type="submit">Suscribirme</button>
-        </form>
+        <a class="submit-btn submit-btn-link" href="{{ site.newsletter_url }}" target="_blank" rel="noopener">Suscribirme en Substack →</a>
       </div>
     </div>
   </section>

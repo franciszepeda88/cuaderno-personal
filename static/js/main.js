@@ -22,6 +22,18 @@
     });
   }
 
+  /* ---------- Back to top ---------- */
+  // Plain #anchor scrolling silently does nothing when the target (the fixed
+  // header on hero pages) is already fully visible in the viewport — the
+  // browser sees it as "already in view" and skips the scroll. Force it instead.
+  var backTop = document.getElementById("back-top");
+  if (backTop) {
+    backTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
   /* ---------- Header scroll transition ---------- */
   var header = document.getElementById("masthead");
   if (header) {

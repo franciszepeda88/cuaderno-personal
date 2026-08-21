@@ -308,18 +308,13 @@ blockquote.pull{
 }
 .newsletter-copy h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.35rem;margin:0 0 8px;}
 .newsletter-copy p{margin:0;color:var(--ink-soft);font-size:0.95rem;max-width:44ch;}
-form.newsletter-form{display:flex;gap:0;flex-shrink:0;}
-input.email-input{
-  font-family:'Archivo',sans-serif;font-size:0.88rem;border:1px solid var(--rule-strong);border-right:none;
-  background:var(--paper);color:var(--ink);padding:12px 14px;width:230px;outline:none;
-}
-input.email-input:focus{border-color:var(--accent);}
-button.submit-btn{
+.submit-btn-link{
   font-family:'Archivo',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;
-  background:var(--accent);color:#fff;border:1px solid var(--accent);padding:0 20px;cursor:pointer;
-  transition:opacity .15s ease;
+  background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:3px;
+  padding:13px 22px;cursor:pointer;text-decoration:none;white-space:nowrap;flex-shrink:0;
+  transition:opacity .15s ease, transform .15s ease;
 }
-button.submit-btn:hover{opacity:0.86;}
+.submit-btn-link:hover{opacity:0.86;transform:translateY(-1px);}
 
 /* ============ Post page ============ */
 .post-page{padding:140px 0 60px;}
@@ -368,7 +363,7 @@ footer{border-top:1px solid var(--rule);padding:40px 0 50px;}
   .essay-num{grid-area:num;} .essay-cat{grid-area:cat;margin-top:0;} .essay-title{grid-area:title;} .essay-date{grid-area:date;text-align:left;margin-top:6px;}
   .topics-grid{grid-template-columns:1fr;}
   .newsletter-box{flex-direction:column;align-items:flex-start;}
-  form.newsletter-form{width:100%;} input.email-input{width:100%;}
+  .submit-btn-link{width:100%;text-align:center;}
   .colophon{flex-direction:column;}
   .post-page{padding-top:120px;}
 }

@@ -20,7 +20,7 @@ bio_extra: >
 pull_quote: "Porque el alma esta teñida con los pensamientos. "
 initials: FZ
 profile_photo: /img/uploads/bmp00347.jpeg
-hero_image: /img/uploads/chatgpt-image-aug-18-2026-at-03_55_28-pm.png
+hero_image: /img/uploads/hero-bg.jpg
 year: 2026
 topics:
   - name: Filosofía
@@ -55,3 +55,5 @@ social:
 newsletter_title: "El boletín ocasional. "
 newsletter_desc: Un ensayo nuevo cada cierto tiempo, directo a tu correo. Sin
   ruido ni publicidad de por medio.
+newsletter_url: https://substack.com/@franciszepeda88
+footer_note: Este cuaderno se actualiza cada dos semanas, aproximadamente.

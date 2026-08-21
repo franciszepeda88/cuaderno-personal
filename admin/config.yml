@@ -78,3 +78,5 @@ collections:
               - { label: "Enlace completo", name: "url", widget: "string" }
           - { label: "Título del boletín", name: "newsletter_title", widget: "string" }
           - { label: "Descripción del boletín", name: "newsletter_desc", widget: "text" }
+          - { label: "Enlace del boletín (tu Substack)", name: "newsletter_url", widget: "string" }
+          - { label: "Nota del pie de página", name: "footer_note", widget: "string", hint: "El © y tu nombre se agregan solos después de esto." }
